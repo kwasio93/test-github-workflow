@@ -1,0 +1,9 @@
+name: job2
+on: push
+jobs:
+    job:
+       runs-on ubuntu-latest
+       steps:
+           - name: Uruchom PyLint
+             run:
+             	pylint ./app.py
