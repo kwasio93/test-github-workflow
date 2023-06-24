@@ -1,0 +1,17 @@
+name: workflow
+on: push
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Pokaz wersje Pythona
+              run: python --version
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Uses
+              uses: actions/checkout@v2
+            - name: Pylint  
+              run: |
+                 pip install pylint Flask
+                 pylint ./app.py
